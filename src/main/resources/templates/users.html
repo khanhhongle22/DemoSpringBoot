@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black; /* Add border to table cells */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Optional: Add background color to header cells */
+        }
+    </style>
+</head>
+<body>
+    <table th:if="${not #lists.isEmpty(users)}">  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+    </tr>
+    </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
