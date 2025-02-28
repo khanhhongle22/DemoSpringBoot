@@ -3,4 +3,7 @@
 - demo2: @PostConstruct và @PreDestroy
 - demo3: @Primary và @Qualifier
 - demo4: CRUD Rest Api, MySQL db
-
+- demo5: JWT Auth, Authorize, MySQL db
+- demo6: Run background task and Schedule
+- demo7: Run background task sending email
+- demo8: Use RabbitMQ listener tasks
