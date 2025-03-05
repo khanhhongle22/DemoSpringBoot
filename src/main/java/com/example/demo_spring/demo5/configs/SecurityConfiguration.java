@@ -45,6 +45,9 @@ public class SecurityConfiguration {
                         .requestMatchers("/api/tasks/**").permitAll()
                         .requestMatchers("/send-email").permitAll()
                         .requestMatchers("/send-task").permitAll()
+                        .requestMatchers("/employee-service/**").permitAll()
+                        .requestMatchers("/address-service/**").permitAll()
+                        .requestMatchers("/products/**").permitAll()
                         .anyRequest().authenticated()
                 ).sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
